@@ -2,7 +2,6 @@
 #define MUESTRASENTRADACL_H_INCLUDED
 #define MAX 30
 
-extern char nombre[6][30];
 typedef struct{
    int *clave;
    char *nombre;
