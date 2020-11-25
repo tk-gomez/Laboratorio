@@ -29,7 +29,7 @@ int main() {
                         printf("No hay espacio en la agenda\n");
                 }
                 else
-                    printf("\nMuestra incompleta, por favor volverse a formar\n");
+                    printf("\nRequisitos incompletos, por favor regrese nuevamente\n");
                 break;
         /*case 2://Fase de procesado y analisis
             if (!validarVacio(*cola)){
