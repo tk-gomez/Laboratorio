@@ -3,7 +3,6 @@
 #include"ColaM.h"
 #define MAX 30
 
-char nombresMuestra[6][30]={"Orina","Sudor","Sangre","Semen","Colesterol","Acido Urico"};
 Muestras *crearMuestras(){
     Muestras *nuevaMuestra;
     nuevaMuestra = (Muestras *)malloc(1*sizeof(Muestras));
@@ -19,12 +18,12 @@ Muestras *crearMuestras(){
 
 
 void CapturarMuestras(Muestras *muestra){
-    srand(time(NULL));
     printf("\nClave de la muestra: ");
     fflush(stdin);
     scanf("%i",&muestra->clave);
-    strcpy(muestra->nombre,nombresMuestra[rand()%5]);
+    printf("Nombre de la muestra: ");
     fflush(stdin);
+    gets(muestra->nombre);
     printf("Departamento: ");
     fflush(stdin);
     gets(muestra->departamento);
