@@ -20,13 +20,13 @@ int main() {
                 num=rand()%100;
                 if (num<=50){
                     if (validarespacio(*cola)){
-                    unaMuestra = crearMuestras();
-                    CapturarMuestras(unaMuestra);
-                    insertar(cola,*unaMuestra);
-                    listar(*cola);
+                        unaMuestra = crearMuestras();
+                        CapturarMuestras(unaMuestra);
+                        insertar(cola,*unaMuestra);
+                        listar(*cola);
                     }
                     else
-                    printf("No hay espacio en la agenda\n");
+                        printf("No hay espacio en la agenda\n");
                 }
                 else
                     printf("\nMuestra incompleta, por favor volverse a formar\n");
