@@ -7,24 +7,30 @@
 
 
 int main() {
-    int opcion;
+    int opcion,num;
 //crear las variables apuntador a la estructura de datos cola y a la estructura paciente
          Cola *cola;
          cola= CrearCola(MAX);
          Muestras *unaMuestra;
     do {
-        opcion = desplegarMenu("\n\n1)Fase de recepcion de muestras\n2)Fase de procesado y analisis\n3)Fase de reporte y entrega al departamento solicitante\nOpcion: ",4);
+        opcion = desplegarMenu("\n1)Fase de recepcion de muestras\n2)Fase de procesado y analisis\n3)Fase de reporte y entrega al departamento solicitante\n\nOpcion: ",4);
         switch (opcion){
         case 1://Fase de recepcion de muestras
-               if (validarespacio(*cola)){
-                unaMuestra = crearMuestras();
-                CapturarMuestras(unaMuestra);
-                insertar(cola,*unaMuestra);
-                listar(*cola);
-               }
-               else
-                printf("No hay espacio en la agenda...\n");
-            break;
+                srand(time(NULL));
+                num=rand()%100;
+                if (num<=50){
+                    if (validarespacio(*cola)){
+                    unaMuestra = crearMuestras();
+                    CapturarMuestras(unaMuestra);
+                    insertar(cola,*unaMuestra);
+                    listar(*cola);
+                    }
+                    else
+                    printf("No hay espacio en la agenda\n");
+                }
+                else
+                    printf("\nMuestra incompleta, por favor volverse a formar\n");
+                break;
         /*case 2://Fase de procesado y analisis
             if (!validarVacio(*cola)){
               *unPaciente=borrar(cola);
