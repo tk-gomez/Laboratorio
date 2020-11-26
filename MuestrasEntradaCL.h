@@ -8,7 +8,7 @@ typedef struct{
    char *departamento;
 } Muestras;
 
-Muestras *CrearMuestras(Muestras muestra);
+Muestras *crearMuestras();
 void CapturarMuestras(Muestras *muestra);
 void ListarMuestras(Muestras muestra);
 
