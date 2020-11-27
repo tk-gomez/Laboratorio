@@ -15,7 +15,7 @@ int main() {
     
 //crear las variables apuntador a la estructura de datos cola y a la estructura paciente 
 	Cola *cola;
-	cola = crearCola(MAX);  //MAXIMO DE 5 ELEMENTOS
+	cola = crearCola();  
 	Muestras *unaMuestra;
 	
 	do {
@@ -35,7 +35,7 @@ int main() {
           //              printf("No hay espacio en la COLA\n");
                 }
                 else
-                    printf("\nRequisitos incompletos, por favor regrese nuevamente\n");
+                    printf("\nRequisitos incompletos, No se genera muestra\n");
                 break;
                 
         case 2://Fase de procesado y analisis
