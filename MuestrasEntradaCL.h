@@ -3,6 +3,7 @@
 #define MAX 30
 
 extern char muestraS [6][30];
+extern char depar[6][30];
 
 typedef struct{
    int *clave;
@@ -10,12 +11,8 @@ typedef struct{
    char *departamento;
 } Muestras;
 
-Muestras *CrearMuestras(Muestras muestra);
-
-
-void crearMuestras(Muestras *muestras);
-void listarMuestras(Muestras muestras);
-void llenarMuestras(Muestras *arrMuestras);
-
+Muestras *crearMuestras();
+void CapturarMuestras(Muestras *muestra);
+void ListarMuestras(Muestras muestra);
 
 #endif // MUESTRASENTRADACL_H_INCLUDED
